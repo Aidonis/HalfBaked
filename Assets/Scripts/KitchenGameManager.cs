@@ -21,7 +21,7 @@ public class KitchenGameManager : MonoBehaviour
 
     private State state;
     
-    private float countdownToStartTimer = 1f;
+    private float countdownToStartTimer = 3f;
     private float gameplayingTimer;
     private float gameplayingTimerMax = 300f;
 
@@ -38,7 +38,8 @@ public class KitchenGameManager : MonoBehaviour
         GameInput.Instance.OnPauseAction += GameInput_OnPauseAction;
         GameInput.Instance.OnInteractAction += GameInput_OnInteractAction;
 
-        //TODO:REMOVE FOR DEBUG PURPOSES TO START GAME
+        //TODO:REMOVE
+        //FOR DEBUG PURPOSES TO START GAME / Enable TutorialUI
         state = State.CountdownToStart;
         OnStateChanged?.Invoke(this, EventArgs.Empty);
     }
